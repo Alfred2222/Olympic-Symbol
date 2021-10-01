@@ -1,49 +1,32 @@
-var names_of_people = [];
-    
-function submit()
-{
-    var GuestName = document.getElementById("name1").value;
-	names_of_people.push(GuestName);
-	console.log(GuestName);    
-    console.log(names_of_people);
-    var lenght_of_name = names_of_people.length;
-    console.log(lenght_of_name);
-	document.getElementById("display_name").innerHTML=names_of_people.toString();
-   }
+canvas=document.getElementById("olympic_canvas");
+ctx=canvas.getContext("2d");
 
+ctx.beginPath();
+ctx.strokeStyle="blue";
+ctx.lineWidth=5;
+ctx.arc(200,200,40,0,4*Math.PI);
+ctx.stroke();
 
+ctx.beginPath();
+ctx.strokeStyle="black";
+ctx.lineWidth=5;
+ctx.arc(300,200,40,0,4*Math.PI);
+ctx.stroke();
 
-function show()
-{
-	var i= names_of_people.join("<br>");
-	console.log(names_of_people);
-	document.getElementById("p1").innerHTML=i.toString();
-	document.getElementById("srch").style.display="block";
-	// display the name in the id= sort_button
-	}
+ctx.beginPath();
+ctx.strokeStyle="red";
+ctx.lineWidth=5;
+ctx.arc(400,200,40,0,4*Math.PI);
+ctx.stroke();
 
+ctx.beginPath();
+ctx.strokeStyle="yellow";
+ctx.lineWidth=5;
+ctx.arc(250,240,40,0,4*Math.PI);
+ctx.stroke();
 
-function sorting()
-	{
-		names_of_people.sort          // add the sort function
-		// .the sort function is .sort();
-		var i= names_of_people.join("<br>");
-		console.log(names_of_people);		
-		document.getElementById("sorted").innerHTML=i.toString();
-		}
-
-
-function searching()
-{
-	var s= document.getElementById("s1").value;
-	var found=0;
-	var j;
-	for(j=0; j<names_of_people.length; j++)
-		{
-			if(s==names_of_people[j]){
-				found=found+1;
-			}	
-		}
-	document.getElementById("p2").innerHTML="name found "+found+" time/s";
-	console.log("found name "+found+" time/s");
-}
+ctx.beginPath();
+ctx.strokeStyle="green";
+ctx.lineWidth=5;
+ctx.arc(350,240,40,0,4*Math.PI);
+ctx.stroke();
